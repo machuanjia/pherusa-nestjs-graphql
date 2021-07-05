@@ -1,0 +1,20 @@
+type Query {
+  hello: String
+  findCat(id: ID): Cat
+  cats: [Cat]
+}
+
+type Cat {
+  id: Int
+  name: String
+  age: Int
+}
+
+type Mutation {
+  addCat(cat: InputCat): Cat
+}
+
+input InputCat {
+  name: String
+  age: Int
+}
